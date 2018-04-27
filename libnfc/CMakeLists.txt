@@ -8,7 +8,7 @@ IF(WIN32)
 ENDIF(WIN32)
 
 # Library's chips
-SET(CHIPS_SOURCES chips/pn53x)
+SET(CHIPS_SOURCES chips/pn53x chips/rc522)
 INCLUDE_DIRECTORIES(${CMAKE_CURRENT_SOURCE_DIR}/chips)
 
 # Library's buses
@@ -58,7 +58,7 @@ IF(LIBUSB_FOUND)
 ENDIF(LIBUSB_FOUND)
 
 # Library
-SET(LIBRARY_SOURCES nfc nfc-device nfc-emulation nfc-internal conf iso14443-subr mirror-subr target-subr ${DRIVERS_SOURCES} ${BUSES_SOURCES} ${CHIPS_SOURCES} ${WINDOWS_SOURCES})
+SET(LIBRARY_SOURCES nfc nfc-device nfc-emulation nfc-internal conf iso14443-subr mirror-subr target-subr timing ${DRIVERS_SOURCES} ${BUSES_SOURCES} ${CHIPS_SOURCES} ${WINDOWS_SOURCES})
 INCLUDE_DIRECTORIES(${CMAKE_CURRENT_SOURCE_DIR})
 
 IF(LIBNFC_LOG)
