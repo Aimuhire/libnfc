@@ -14,7 +14,8 @@
  * You should have received a copy of the GNU Lesser General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>
  */
- 
+#define _POSIX_C_SOURCE 199309L
+
 #include "timing.h"
 #include <assert.h>
 
